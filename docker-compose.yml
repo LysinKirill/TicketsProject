@@ -1,9 +1,11 @@
 version: '3.8'
 services:
   authentication-service:
-    build: ./authentication-service
+    build:
+      context: authentication-service
+      dockerfile: Dockerfile
     ports:
-      - "8080:8080" # Maps host port 8080 to container port 8080
+      - "8080:8080"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://auth-db:5432/auth
       - SPRING_DATASOURCE_USERNAME=postgres
@@ -13,7 +15,8 @@ services:
       - auth-db
 
   auth-db:
-    image: postgres:latest
+    image: postgres
+    container_name: auth-service-db
     environment:
       - POSTGRES_DB=auth
       - POSTGRES_USER=postgres

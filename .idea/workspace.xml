@@ -4,33 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Configure database, add basic security template, add authentication service and controller">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/AuthenticationServiceApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/SecurityConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/AuthenticationRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/AuthenticationResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/entity/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/repository/UserRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/kotlin/ru/hse/authenticationservice/AuthenticationServiceApplicationTests.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/JsonAuthenticationFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/UserCredentials.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/exceptions/UserAlreadyExistsException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/UserCredentialsServiceImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/UserCredentialsService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/SecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +35,31 @@
     <projectState path="$PROJECT_DIR$/authentication-service">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TicketsProject" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TicketsProject" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,25 +78,25 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LysinKirill"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LysinKirill&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LysinKirill/TicketsProject.git",
-    "accountId": "025c2335-44de-4478-a710-c917142aa621"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LysinKirill/TicketsProject.git&quot;,
+    &quot;accountId&quot;: &quot;0f1cdffb-8251-485d-bda7-ace0be9deb38&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hEG3OkNB8FsNxnNSPFMkpddWNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -89,18 +105,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.DatabaseService.executor": "Run",
+    "Docker.docker-compose.yml.auth-db: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.authentication-service: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "Gradle.Build authentication-service.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "Gradle.Load Gradle Dependencies.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.AuthenticationServiceDocker.executor": "Run",
     "git-widget-placeholder": "AuthenticationService",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Kirill/Desktop/KPO/MicroExample/microservices_CRM",
+    "last_opened_file_path": "D:/KPO/TicketsProject/TicketsProject/docker-compose.yml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,18 +139,20 @@
       "postgresql"
     ],
     "kotlin-gradle-user-dirs": [
-      "C:\\Users\\Kirill\\.gradle"
+      "C:\\Users\\Xiaomi\\.gradle"
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationServiceApplication">
-    <configuration name="AuthenticationServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="TicketsProject.authentication-service.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.hse.authenticationservice.service.interfaces" />
+      <recent name="ru.hse.authenticationservice.service" />
+    </key>
+    <key name="KotlinExtractInterfaceDialog.RECENT_KEYS">
+      <recent name="ru.hse.authenticationservice.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceDocker">
     <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="authentication-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
@@ -135,13 +160,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthenticationServiceDocker" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="authentication-service.main" />
+      <target name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="DatabaseService" run_configuration_type="docker-deploy" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseService" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="auth-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.auth-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="auth-db" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
@@ -160,9 +224,18 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.DatabaseService" />
+      <item itemvalue="Docker.docker-compose.yml.auth-db: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Spring Boot.AuthenticationServiceDocker" />
+      <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.auth-db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -170,8 +243,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -184,6 +257,8 @@
       <option name="presentableId" value="Default" />
       <updated>1717151626058</updated>
       <workItem from="1717151627197" duration="19301000" />
+      <workItem from="1717545090942" duration="6329000" />
+      <workItem from="1717596386333" duration="5340000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
