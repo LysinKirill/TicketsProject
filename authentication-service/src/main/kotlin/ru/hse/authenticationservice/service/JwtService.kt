@@ -5,14 +5,13 @@ import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
-import ru.hse.authenticationservice.dto.UserCredentials
 import ru.hse.authenticationservice.entity.User
 import java.util.*
 
 @Service
 class JwtService(
     @Value("\${jwt.secret}") private val secretKey: String,
-    @Value("\${jwt.expiration}") private val jwtExpirationInMs: Long
+    @Value("\${jwt.expiration}") val jwtExpirationInMs: Long
 ) {
 
     fun generateToken(claims: Map<String, Any>, subject: User): String {
@@ -29,24 +28,24 @@ class JwtService(
         return generateToken(HashMap(), user)
     }
 
-    fun getClaimsFromToken(token: String): Claims {
+    fun validateToken(token: String): Boolean {
+        val claims = getClaimsFromToken(token)
+        return !isTokenExpired(claims)
+    }
+
+    fun getUsernameFromToken(token: String): String {
+        val claims = getClaimsFromToken(token)
+        return claims.subject
+    }
+
+    private fun getClaimsFromToken(token: String): Claims {
         return Jwts.parser()
             .setSigningKey(secretKey)
             .parseClaimsJws(token)
             .body
     }
 
-    fun getUsernameFromToken(token: String): String {
-        return getClaimsFromToken(token).subject
-    }
-
-    fun validateToken(token: String, userCredentials: UserCredentials): Boolean {
-        val username = getUsernameFromToken(token)
-        return (username == userCredentials.email && !isTokenExpired(token))
-    }
-
-    private fun isTokenExpired(token: String): Boolean {
-        val expiration = getClaimsFromToken(token).expiration
-        return expiration.before(Date())
+    private fun isTokenExpired(claims: Claims): Boolean {
+        return claims.expiration.before(Date())
     }
 }

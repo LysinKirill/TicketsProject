@@ -44,4 +44,14 @@ class UserController(private val authenticationService: AuthenticationServiceImp
             ResponseEntity(HttpStatus.UNAUTHORIZED)
         }
     }
+
+    @PostMapping("/validate")
+    fun validateToken(@RequestHeader("Authorization") token: String): ResponseEntity<Boolean> {
+        return try {
+            val isValid = authenticationService.validateTokenAndSession(token)
+            ResponseEntity(isValid, HttpStatus.OK)
+        } catch (e: Exception) {
+            ResponseEntity(false, HttpStatus.UNAUTHORIZED)
+        }
+    }
 }
