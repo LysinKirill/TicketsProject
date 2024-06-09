@@ -23,3 +23,31 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432:5432"
+  ticket-service:
+    build:
+      context: tickets-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://tickets-db:5432/tickets
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL-AUTO=update
+    depends_on:
+      - tickets-db
+
+  tickets-db:
+    image: postgres
+    container_name: tickets-service-db
+    environment:
+      - POSTGRES_DB=tickets
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5433:5432"
+
+networks:
+  default:
+    name: ticketing_network
+    driver: bridge
