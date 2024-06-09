@@ -22,18 +22,21 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.security:spring-security-jwt:1.1.1.RELEASE")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	//implementation("io.jsonwebtoken:jjwt:0.9.1")
 
 	implementation("io.jsonwebtoken:jjwt-api:0.12.5")
 	implementation("io.jsonwebtoken:jjwt-impl:0.12.5")
 	implementation("io.jsonwebtoken:jjwt-jackson:0.12.5")
 
-	implementation("javax.xml.bind:jaxb-api:2.3.1")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+
 	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test") {
+		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+	}
+
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
@@ -44,9 +47,6 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
-//tasks.withType<Test> {
-//	useJUnitPlatform()
-//}
 tasks.withType<Test> {
-	enabled = false
+	useJUnitPlatform() // Re-enable if you need to use the JUnit platform
 }

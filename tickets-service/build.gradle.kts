@@ -35,6 +35,9 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging:2.1.21")
     implementation("com.auth0:java-jwt:3.18.2")
     implementation("javax.xml.bind:jaxb-api:2.3.1")
+    //implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+    //implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+
     runtimeOnly("org.postgresql:postgresql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")

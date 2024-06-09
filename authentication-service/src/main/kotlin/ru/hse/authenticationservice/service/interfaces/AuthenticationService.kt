@@ -1,7 +1,7 @@
 package ru.hse.authenticationservice.service.interfaces
 
 import ru.hse.authenticationservice.dto.requests.AuthenticationRequest
-import ru.hse.authenticationservice.dto.requests.AuthenticationResponse
+import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
 
 interface AuthenticationService {
     fun registerUser(request: AuthenticationRequest): AuthenticationResponse

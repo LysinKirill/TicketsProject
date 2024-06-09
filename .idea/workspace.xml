@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Implement queue-based batch order processing logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/SecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/AuthenticationResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/responses/AuthenticationResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,63 +100,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.DatabaseService.executor": "Run",
-    "Docker.DatabaseServiceAuth.executor": "Run",
-    "Docker.DatabaseServiceTickets.executor": "Run",
-    "Docker.docker-compose.yml.auth-db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.authentication-service: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.ticket-service: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml.tickets-db: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.tickets-service/Dockerfile.executor": "Run",
-    "Gradle.Build TicketsProject.executor": "Run",
-    "Gradle.Build authentication-service.executor": "Run",
-    "Gradle.Build tickets-service.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Kotlin script (Beta).build.gradle.kts.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.gradlew.executor": "Run",
-    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
-    "Spring Boot.AuthenticationServiceDocker.executor": "Run",
-    "Spring Boot.TicketServiceDocker.executor": "Debug",
-    "Spring Boot.TicketsServiceApplication.executor": "Debug",
-    "git-widget-placeholder": "tickets-service",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/KPO/TicketsProject/TicketsProject/docker-compose.yml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.DatabaseService.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.DatabaseServiceAuth.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.DatabaseServiceTickets.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.auth-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.authentication-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.ticket-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.tickets-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.tickets-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build TicketsProject.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build authentication-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build tickets-service.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin script (Beta).build.gradle.kts.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.gradlew.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationServiceDocker.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TicketServiceDocker.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TicketsServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ControllerEnhancements&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/KPO/TicketsProject/TicketsProject/docker-compose.yml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "kotlin-gradle-user-dirs": [
-      "C:\\Users\\Xiaomi\\.gradle"
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\Xiaomi\\.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\KPO\TicketsProject\TicketsProject\tickets-service\src\main\resources\db" />
       <recent name="D:\KPO\TicketsProject\TicketsProject\tickets-service\src\main\resources" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.hse.authenticationservice.dto.responses" />
       <recent name="ru.hse.authenticationservice.service.interfaces" />
       <recent name="ru.hse.authenticationservice.service" />
     </key>
@@ -157,7 +165,7 @@
       <recent name="ru.hse.authenticationservice.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TicketServiceDocker">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceDocker">
     <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="TicketsProject" />
       <option name="filePath" value="$PROJECT_DIR$/tickets-service/build.gradle.kts" />
@@ -349,6 +357,7 @@
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
       <workItem from="1717921003150" duration="18092000" />
+      <workItem from="1717976069671" duration="607000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />

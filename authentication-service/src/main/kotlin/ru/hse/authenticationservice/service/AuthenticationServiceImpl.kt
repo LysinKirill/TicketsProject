@@ -3,7 +3,7 @@ package ru.hse.authenticationservice.service
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
 import ru.hse.authenticationservice.dto.requests.AuthenticationRequest
-import ru.hse.authenticationservice.dto.requests.AuthenticationResponse
+import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
 import ru.hse.authenticationservice.entity.Session
 import ru.hse.authenticationservice.entity.User
 import ru.hse.authenticationservice.exceptions.UserAlreadyExistsException
