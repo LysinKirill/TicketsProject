@@ -33,6 +33,7 @@ class TicketServiceImpl(
 
         val newOrderId = orderRepository.save(newOrder).id
         orderProcessor.addOrderToProcessing(newOrder)
+
         return OrderResponse(
             orderId = newOrderId,
             userId = userId,

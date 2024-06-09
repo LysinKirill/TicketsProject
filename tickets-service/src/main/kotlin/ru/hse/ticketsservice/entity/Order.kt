@@ -22,7 +22,7 @@ data class Order(
 
     @Convert(converter = OrderStatusConverter::class)
     @Column(name = "status", nullable = false)
-    val status: OrderStatus = OrderStatus.CHECK,
+    var status: OrderStatus = OrderStatus.CHECK,
 
     @Column(name = "created", nullable = false)
     val created: Date = Date.from(Instant.now())
