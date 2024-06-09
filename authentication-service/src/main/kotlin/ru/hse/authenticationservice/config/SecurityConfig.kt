@@ -15,13 +15,14 @@ class SecurityConfiguration(private val jwtAuthenticationFilter: JwtAuthenticati
         return http.csrf { it.disable() }
             .authorizeHttpRequests {
                 it
-                    .requestMatchers(
-                        "/",
-                        "/api/auth/register",
-                        "/api/auth/login",
-                        "/api/auth/validate",
-                    ).permitAll()
-                    .anyRequest().authenticated()
+                    .anyRequest().permitAll()
+//                    .requestMatchers(
+//                        "/",
+//                        "/api/auth/register",
+//                        "/api/auth/login",
+//                        "/api/auth/validate"
+//                    ).permitAll()
+//                    .anyRequest().authenticated()
             }
             .sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.STATELESS) }
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter::class.java)
