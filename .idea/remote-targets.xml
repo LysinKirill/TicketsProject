@@ -21,6 +21,25 @@
           </config>
         </ContributedStateBase>
       </target>
+      <target name="ticket-service" type="docker-compose" uuid="077184fc-4695-433d-b578-fa88dbc5c3f8">
+        <config>
+          <option name="targetPlatform">
+            <TargetPlatform />
+          </option>
+          <option name="configurationFiles">
+            <list>
+              <option value="D:\KPO\TicketsProject\TicketsProject\docker-compose.yml" />
+            </list>
+          </option>
+          <option name="serviceName" value="ticket-service" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/usr/local/openjdk-17" />
+            <option name="javaVersionString" value="17.0.2" />
+          </config>
+        </ContributedStateBase>
+      </target>
     </targets>
   </component>
 </project>
