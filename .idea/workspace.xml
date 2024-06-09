@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add swagger for authentication service">
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="update workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/SecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +353,7 @@
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
       <workItem from="1717921003150" duration="18092000" />
-      <workItem from="1717976069671" duration="1117000" />
+      <workItem from="1717976069671" duration="1337000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -464,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717976711447</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update workspace.xml">
+      <option name="closed" value="true" />
+      <created>1717977270517</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717977270517</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +498,8 @@
     <MESSAGE value="Add order status to order response DTO" />
     <MESSAGE value="Implement queue-based batch order processing logic" />
     <MESSAGE value="Add swagger for authentication service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add swagger for authentication service" />
+    <MESSAGE value="update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

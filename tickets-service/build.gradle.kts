@@ -20,13 +20,13 @@ repositories {
 }
 
 dependencies {
+    // Existing dependencies...
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    //implementation("io.jsonwebtoken:jjwt:0.9.1")
 
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     implementation("io.jsonwebtoken:jjwt-impl:0.11.5")
@@ -35,16 +35,15 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging:2.1.21")
     implementation("com.auth0:java-jwt:3.18.2")
     implementation("javax.xml.bind:jaxb-api:2.3.1")
-    //implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
-    //implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
-
     runtimeOnly("org.postgresql:postgresql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.springframework.security:spring-security-test")
-}
 
+    // Swagger dependencies
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0") // Swagger for Spring Boot 3.x
+}
 //tasks.withType<Test> {
 //    useJUnitPlatform()
 //}
