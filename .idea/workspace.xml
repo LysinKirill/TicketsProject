@@ -4,33 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Implement ticket service">
-      <change afterPath="$PROJECT_DIR$/authentication-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/JwtAuthenticationFilter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/SecurityConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/requests/CreateOrderRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/responses/OrderResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/exceptions/StationNotFoundException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/JwtService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/OrderProcessorImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/TicketServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/interfaces/OrderProcessor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/interfaces/TicketService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/resources/db/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/resources/db/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/remote-targets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Implement queue-based batch order processing logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Order.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +348,7 @@
       <workItem from="1717777670214" duration="9884000" />
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
-      <workItem from="1717921003150" duration="14342000" />
+      <workItem from="1717921003150" duration="18092000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -423,7 +398,63 @@
       <option name="project" value="LOCAL" />
       <updated>1717784079785</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implement ticket service">
+      <option name="closed" value="true" />
+      <created>1717948096533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948096534</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update docker-compose. Add Dockerfiles">
+      <option name="closed" value="true" />
+      <created>1717948159661</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948159661</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update JwtService and JwtAuthenticationFilter">
+      <option name="closed" value="true" />
+      <created>1717948227659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948227659</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implement controller for ticket service">
+      <option name="closed" value="true" />
+      <created>1717948252810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948252810</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add schema.sql for schema initialization and data.sql for seeding">
+      <option name="closed" value="true" />
+      <created>1717948318425</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948318425</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add order status to order response DTO">
+      <option name="closed" value="true" />
+      <created>1717948677903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948677903</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implement queue-based batch order processing logic">
+      <option name="closed" value="true" />
+      <created>1717952437293</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717952437293</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,26 +470,17 @@
     <MESSAGE value="Add order and station repositories" />
     <MESSAGE value="Update build.gradle.kts" />
     <MESSAGE value="Implement ticket service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement ticket service" />
+    <MESSAGE value="Update docker-compose. Add Dockerfiles" />
+    <MESSAGE value="Update JwtService and JwtAuthenticationFilter" />
+    <MESSAGE value="Implement controller for ticket service" />
+    <MESSAGE value="Add schema.sql for schema initialization and data.sql for seeding" />
+    <MESSAGE value="Add order status to order response DTO" />
+    <MESSAGE value="Implement queue-based batch order processing logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement queue-based batch order processing logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/service/JwtService.kt</url>
-          <line>44</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt</url>
-          <line>21</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/JwtAuthenticationFilter.kt</url>
-          <line>22</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/impl/Base64Codec.java</url>
           <line>25</line>
