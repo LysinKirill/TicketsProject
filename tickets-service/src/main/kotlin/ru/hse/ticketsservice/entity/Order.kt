@@ -6,7 +6,7 @@ import java.util.*
 
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 data class Order(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
@@ -14,13 +14,11 @@ data class Order(
     @Column(name = "user_id", nullable = false)
     val userId: Long,
 
-    @ManyToOne
-    @JoinColumn(name = "from_station_id", nullable = false)
-    val fromStation: Station,
+    @Column(name = "from_station_id", nullable = false)
+    val fromStationId: Long,
 
-    @ManyToOne
-    @JoinColumn(name = "to_station_id", nullable = false)
-    val toStation: Station,
+    @Column(name = "to_station_id", nullable = false)
+    val toStationId: Long,
 
     @Convert(converter = OrderStatusConverter::class)
     @Column(name = "status", nullable = false)

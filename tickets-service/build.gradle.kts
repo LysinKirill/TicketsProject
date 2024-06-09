@@ -26,8 +26,15 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.jsonwebtoken:jjwt:0.9.1")
+    //implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+    implementation("io.jsonwebtoken:jjwt-api:0.11.5")
+    implementation("io.jsonwebtoken:jjwt-impl:0.11.5")
+    implementation("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
     implementation("io.github.microutils:kotlin-logging:2.1.21")
+    implementation("com.auth0:java-jwt:3.18.2")
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
     runtimeOnly("org.postgresql:postgresql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")

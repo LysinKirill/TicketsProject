@@ -4,4 +4,5 @@ plugins {
 rootProject.name = "TicketsProject"
 
 include(":authentication-service")
+include(":tickets-service")
 
