@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service
 import ru.hse.ticketsservice.dto.requests.CreateOrderRequest
 import ru.hse.ticketsservice.dto.responses.OrderResponse
 import ru.hse.ticketsservice.entity.Order
+import ru.hse.ticketsservice.entity.OrderStatus
 import ru.hse.ticketsservice.exceptions.StationNotFoundException
 import ru.hse.ticketsservice.repository.OrderRepository
 import ru.hse.ticketsservice.repository.StationRepository
@@ -37,7 +38,8 @@ class TicketServiceImpl(
             userId = userId,
             fromStationId = fromStationId,
             toStationId = toStationId,
-            createdAt = timestamp
+            createdAt = timestamp,
+            orderStatus = OrderStatus.CHECK
         )
     }
 
@@ -51,7 +53,8 @@ class TicketServiceImpl(
                     userId = orderResult.userId,
                     fromStationId = orderResult.fromStationId,
                     toStationId = orderResult.toStationId,
-                    createdAt = orderResult.created
+                    createdAt = orderResult.created,
+                    orderStatus = orderResult.status
                 )
             )
         } else {
