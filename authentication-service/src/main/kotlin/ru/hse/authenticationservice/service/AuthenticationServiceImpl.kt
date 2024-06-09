@@ -6,6 +6,7 @@ import ru.hse.authenticationservice.dto.requests.AuthenticationRequest
 import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
 import ru.hse.authenticationservice.entity.Session
 import ru.hse.authenticationservice.entity.User
+import ru.hse.authenticationservice.exceptions.InvalidUserCredentialsException
 import ru.hse.authenticationservice.exceptions.UserAlreadyExistsException
 import ru.hse.authenticationservice.repository.SessionRepository
 import ru.hse.authenticationservice.repository.UserRepository
@@ -44,10 +45,10 @@ class AuthenticationServiceImpl(
 
     override fun loginUser(request: AuthenticationRequest): AuthenticationResponse {
         val user = userRepository.findByEmail(request.email)
-            .orElseThrow { IllegalArgumentException("Invalid email or password") }
+            .orElseThrow { InvalidUserCredentialsException("Invalid email or password") }
 
         if (!passwordEncoder.matches(request.password, user.password)) {
-            throw IllegalArgumentException("Invalid email or password")
+            throw InvalidUserCredentialsException("Invalid email or password")
         }
 
         val token = jwtService.generateToken(user)
