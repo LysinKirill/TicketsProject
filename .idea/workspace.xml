@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add validation">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/GetUserInfoRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/responses/GetUserInfoResponse.kt" afterDir="false" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Implement queue-based batch order processing logic">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/JwtAuthenticationFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/config/JwtAuthenticationFilter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/UserCredentials.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/JwtService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,15 +56,15 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Dockerfile" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="ControllerEnhancements" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +81,6 @@
     &quot;accountId&quot;: &quot;0f1cdffb-8251-485d-bda7-ace0be9deb38&quot;
   }
 }</component>
-  <component name="KotlinScriptingSettings" supportWarning="false" />
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -127,10 +119,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Shell Script.gradlew.executor": "Run",
     "Spring Boot.AuthenticationServiceApplication.executor": "Run",
-    "Spring Boot.AuthenticationServiceDocker.executor": "Debug",
-    "Spring Boot.TicketServiceDocker.executor": "Run",
+    "Spring Boot.AuthenticationServiceDocker.executor": "Run",
+    "Spring Boot.TicketServiceDocker.executor": "Debug",
     "Spring Boot.TicketsServiceApplication.executor": "Debug",
-    "git-widget-placeholder": "ControllerEnhancements",
+    "git-widget-placeholder": "develop",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/KPO/TicketsProject/TicketsProject/docker-compose.yml",
@@ -159,7 +151,6 @@
       <recent name="D:\KPO\TicketsProject\TicketsProject\tickets-service\src\main\resources" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="ru.hse.authenticationservice.dto.responses" />
       <recent name="ru.hse.authenticationservice.service.interfaces" />
       <recent name="ru.hse.authenticationservice.service" />
     </key>
@@ -167,7 +158,7 @@
       <recent name="ru.hse.authenticationservice.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationServiceDocker">
+  <component name="RunManager" selected="Spring Boot.TicketServiceDocker">
     <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="TicketsProject" />
       <option name="filePath" value="$PROJECT_DIR$/tickets-service/build.gradle.kts" />
@@ -359,7 +350,6 @@
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
       <workItem from="1717921003150" duration="18092000" />
-      <workItem from="1717976069671" duration="9622000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -465,55 +455,7 @@
       <option name="project" value="LOCAL" />
       <updated>1717952437293</updated>
     </task>
-    <task id="LOCAL-00014" summary="Add swagger for authentication service">
-      <option name="closed" value="true" />
-      <created>1717976711447</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1717976711447</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update workspace.xml">
-      <option name="closed" value="true" />
-      <created>1717977270517</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1717977270517</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add swagger for tickets service">
-      <option name="closed" value="true" />
-      <created>1717977543675</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1717977543675</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add global exception handler for authentication service">
-      <option name="closed" value="true" />
-      <created>1717978108521</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1717978108521</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Add global exception handler for authentication service">
-      <option name="closed" value="true" />
-      <created>1717978119167</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1717978119167</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Add validation">
-      <option name="closed" value="true" />
-      <created>1717983399611</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1717983399611</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,12 +477,7 @@
     <MESSAGE value="Add schema.sql for schema initialization and data.sql for seeding" />
     <MESSAGE value="Add order status to order response DTO" />
     <MESSAGE value="Implement queue-based batch order processing logic" />
-    <MESSAGE value="Add swagger for authentication service" />
-    <MESSAGE value="update workspace.xml" />
-    <MESSAGE value="Add swagger for tickets service" />
-    <MESSAGE value="Add global exception handler for authentication service" />
-    <MESSAGE value="Add validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement queue-based batch order processing logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -549,21 +486,6 @@
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/impl/Base64Codec.java</url>
           <line>25</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt</url>
-          <line>60</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/GlobalExceptionHandler.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt</url>
-          <line>87</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
