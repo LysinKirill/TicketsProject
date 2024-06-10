@@ -16,8 +16,6 @@ import ru.hse.authenticationservice.service.AuthenticationServiceImpl
 @RequestMapping("/api/auth")
 class UserController(private val authenticationService: AuthenticationServiceImpl) {
 
-    //private val logger = LoggerFactory.getLogger(UserController::class.java)
-
     @Operation(summary = "Register a new user", description = "Creates a new user account with the provided details.")
     @ApiResponses(
         value = [
