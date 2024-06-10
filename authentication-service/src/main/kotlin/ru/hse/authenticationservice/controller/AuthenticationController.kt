@@ -5,10 +5,12 @@ import io.swagger.v3.oas.annotations.media.Content
 import io.swagger.v3.oas.annotations.media.Schema
 import io.swagger.v3.oas.annotations.responses.ApiResponse
 import io.swagger.v3.oas.annotations.responses.ApiResponses
+import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import ru.hse.authenticationservice.dto.requests.AuthenticationRequest
+import ru.hse.authenticationservice.dto.requests.LoginRequest
+import ru.hse.authenticationservice.dto.requests.RegisterRequest
 import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
 import ru.hse.authenticationservice.service.AuthenticationServiceImpl
 
@@ -25,7 +27,7 @@ class UserController(private val authenticationService: AuthenticationServiceImp
         ]
     )
     @PostMapping("/register")
-    fun registerUser(@RequestBody request: AuthenticationRequest): ResponseEntity<AuthenticationResponse> {
+    fun registerUser(@Valid @RequestBody request: RegisterRequest): ResponseEntity<AuthenticationResponse> {
         val result = authenticationService.registerUser(request)
         return ResponseEntity(result, HttpStatus.CREATED)
     }
@@ -35,24 +37,12 @@ class UserController(private val authenticationService: AuthenticationServiceImp
         value = [
             ApiResponse(responseCode = "200", description = "User authenticated successfully", content = [Content(mediaType = "application/json", schema = Schema(implementation = AuthenticationResponse::class))]),
             ApiResponse(responseCode = "401", description = "Unauthorized", content = [Content()]),
+            ApiResponse(responseCode = "403", description = "Forbidden", content = [Content()]),
         ]
     )
     @PostMapping("/login")
-    fun loginUser(@RequestBody request: AuthenticationRequest): ResponseEntity<AuthenticationResponse> {
+    fun loginUser(@Valid @RequestBody request: LoginRequest): ResponseEntity<AuthenticationResponse> {
         val result = authenticationService.loginUser(request)
         return ResponseEntity(result, HttpStatus.OK)
-    }
-
-    @Operation(summary = "Validate JWT token", description = "Validates the given JWT token.")
-    @ApiResponses(
-        value = [
-            ApiResponse(responseCode = "200", description = "Token is valid", content = [Content(mediaType = "application/json", schema = Schema(implementation = Boolean::class))]),
-            ApiResponse(responseCode = "401", description = "Unauthorized - Token is invalid", content = [Content()])
-        ]
-    )
-    @PostMapping("/validate")
-    fun validateToken(@RequestHeader("Authorization") token: String): ResponseEntity<Boolean> {
-        val isValid = authenticationService.validateTokenAndSession(token)
-        return ResponseEntity(isValid, HttpStatus.OK)
     }
 }

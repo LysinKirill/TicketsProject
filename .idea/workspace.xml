@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add swagger for tickets service">
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/GlobalExceptionHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/exceptions/InvalidUserCredentialsException.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/exceptions/NotFoundException.kt" afterDir="false" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add global exception handler for authentication service">
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/LoginRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/RegisterRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/GlobalExceptionHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/exceptions/InvalidOrderException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/exceptions/OrderNotFoundException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/GlobalExceptionHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/GlobalExceptionHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/dto/requests/AuthenticationRequest.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/interfaces/AuthenticationService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/requests/CreateOrderRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/requests/CreateOrderRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/responses/OrderResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/dto/responses/OrderResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Order.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Station.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/entity/Station.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +368,7 @@
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
       <workItem from="1717921003150" duration="18092000" />
-      <workItem from="1717976069671" duration="1750000" />
+      <workItem from="1717976069671" duration="6985000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -486,7 +498,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717977543675</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add global exception handler for authentication service">
+      <option name="closed" value="true" />
+      <created>1717978108521</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717978108521</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add global exception handler for authentication service">
+      <option name="closed" value="true" />
+      <created>1717978119167</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717978119167</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +539,8 @@
     <MESSAGE value="Add swagger for authentication service" />
     <MESSAGE value="update workspace.xml" />
     <MESSAGE value="Add swagger for tickets service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add swagger for tickets service" />
+    <MESSAGE value="Add global exception handler for authentication service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add global exception handler for authentication service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

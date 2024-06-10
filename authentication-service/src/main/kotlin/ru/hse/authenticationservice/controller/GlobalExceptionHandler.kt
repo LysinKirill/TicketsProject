@@ -1,14 +1,18 @@
 package ru.hse.authenticationservice.controller
 
+import jakarta.validation.ConstraintViolationException
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.http.ProblemDetail
 import org.springframework.http.converter.HttpMessageNotReadableException
+import org.springframework.validation.FieldError
+import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 import org.springframework.web.bind.support.WebExchangeBindException
 import org.springframework.web.server.ServerWebExchange
+import ru.hse.authenticationservice.exceptions.InvalidUserCredentialsException
 import ru.hse.authenticationservice.exceptions.NotFoundException
 import ru.hse.authenticationservice.exceptions.UserAlreadyExistsException
 import java.net.URI
@@ -44,6 +48,16 @@ class GlobalExceptionHandler {
         return problemDetail
     }
 
+
+    @ExceptionHandler(InvalidUserCredentialsException::class)
+    fun handleNotFoundException(e: InvalidUserCredentialsException): ProblemDetail {
+        val problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.FORBIDDEN, e.message ?: "Authorization failed")
+        problemDetail.type = URI.create("https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.4")
+
+        return problemDetail
+    }
+
+
     @ExceptionHandler(WebExchangeBindException::class)
     fun handleWebExchangeBindException(
         ex: WebExchangeBindException,
@@ -77,6 +91,25 @@ class GlobalExceptionHandler {
         return problemDetail
     }
 
+    @ExceptionHandler(MethodArgumentNotValidException::class)
+    fun handleValidationException(e: MethodArgumentNotValidException): ProblemDetail {
+        val fieldErrors = e.bindingResult.allErrors.associate { error ->
+            val fieldName = if (error is FieldError) error.field else "object"
+            fieldName to error.defaultMessage
+        }
+
+        val fieldErrorsStr = e.fieldErrors.joinToString { error ->
+            "${error.field}: ${error.defaultMessage}"
+        }
+
+        val problemDetail = ProblemDetail.forStatusAndDetail(
+            HttpStatus.BAD_REQUEST,
+            "Validation failed for request fields: $fieldErrorsStr"
+        )
+        problemDetail.type = URI.create("https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1")
+        problemDetail.properties?.set("fieldErrors", fieldErrors)
+        return problemDetail
+    }
 
     @ExceptionHandler(Exception::class)
     fun handleException(e: Exception): ProblemDetail {
@@ -86,6 +119,24 @@ class GlobalExceptionHandler {
             "Internal server error occurred: ${e.message}"
         )
         problemDetail.type = URI.create("https://datatracker.ietf.org/doc/html/rfc9110#section-15.6.1")
+
+        return problemDetail
+    }
+
+    @ExceptionHandler(ConstraintViolationException::class)
+    fun handleConstraintViolationException(e: ConstraintViolationException): ProblemDetail {
+        val violations = e.constraintViolations.associate {
+            it.propertyPath.toString() to it.message
+        }
+
+        val fieldErrorsStr = e.constraintViolations.joinToString { error -> error.message }
+
+        val problemDetail = ProblemDetail.forStatusAndDetail(
+            HttpStatus.BAD_REQUEST,
+            "Constraint violations: $fieldErrorsStr"
+        )
+        problemDetail.type = URI.create("https://datatracker.ietf.org/doc/html/rfc9110#section-15.5.1")
+        problemDetail.properties?.set("violations", violations)
 
         return problemDetail
     }

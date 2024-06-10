@@ -1,8 +1,10 @@
 package ru.hse.authenticationservice.service
 
+import jakarta.validation.Valid
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
-import ru.hse.authenticationservice.dto.requests.AuthenticationRequest
+import ru.hse.authenticationservice.dto.requests.LoginRequest
+import ru.hse.authenticationservice.dto.requests.RegisterRequest
 import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
 import ru.hse.authenticationservice.entity.Session
 import ru.hse.authenticationservice.entity.User
@@ -13,6 +15,7 @@ import ru.hse.authenticationservice.repository.UserRepository
 import ru.hse.authenticationservice.service.interfaces.AuthenticationService
 import java.util.*
 
+
 @Service
 class AuthenticationServiceImpl(
     private val userRepository: UserRepository,
@@ -22,11 +25,12 @@ class AuthenticationServiceImpl(
 {
     private val passwordEncoder = BCryptPasswordEncoder()
 
-    override fun registerUser(request: AuthenticationRequest): AuthenticationResponse {
+    override fun registerUser(@Valid request: RegisterRequest): AuthenticationResponse {
         val existingUser = userRepository.findByEmail(request.email)
         if (existingUser.isPresent) {
             throw UserAlreadyExistsException("User with email ${request.email} already exists")
         }
+
 
         val encodedPassword = passwordEncoder.encode(request.password)
         val user = User(
@@ -43,7 +47,7 @@ class AuthenticationServiceImpl(
         return AuthenticationResponse(token)
     }
 
-    override fun loginUser(request: AuthenticationRequest): AuthenticationResponse {
+    override fun loginUser(request: LoginRequest): AuthenticationResponse {
         val user = userRepository.findByEmail(request.email)
             .orElseThrow { InvalidUserCredentialsException("Invalid email or password") }
 

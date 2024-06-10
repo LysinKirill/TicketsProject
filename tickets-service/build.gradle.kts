@@ -41,12 +41,9 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testImplementation("org.springframework.security:spring-security-test")
 
-    // Swagger dependencies
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0") // Swagger for Spring Boot 3.x
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 }
-//tasks.withType<Test> {
-//    useJUnitPlatform()
-//}
 
 tasks.withType<Test> {
     enabled = false
