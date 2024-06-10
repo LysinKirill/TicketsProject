@@ -3,12 +3,15 @@ package ru.hse.authenticationservice.service
 import jakarta.validation.Valid
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.stereotype.Service
+import ru.hse.authenticationservice.dto.requests.GetUserInfoRequest
 import ru.hse.authenticationservice.dto.requests.LoginRequest
 import ru.hse.authenticationservice.dto.requests.RegisterRequest
 import ru.hse.authenticationservice.dto.responses.AuthenticationResponse
+import ru.hse.authenticationservice.dto.responses.GetUserInfoResponse
 import ru.hse.authenticationservice.entity.Session
 import ru.hse.authenticationservice.entity.User
 import ru.hse.authenticationservice.exceptions.InvalidUserCredentialsException
+import ru.hse.authenticationservice.exceptions.NotFoundException
 import ru.hse.authenticationservice.exceptions.UserAlreadyExistsException
 import ru.hse.authenticationservice.repository.SessionRepository
 import ru.hse.authenticationservice.repository.UserRepository
@@ -21,8 +24,7 @@ class AuthenticationServiceImpl(
     private val userRepository: UserRepository,
     private val sessionRepository: SessionRepository,
     private val jwtService: JwtService
-) : AuthenticationService
-{
+) : AuthenticationService {
     private val passwordEncoder = BCryptPasswordEncoder()
 
     override fun registerUser(@Valid request: RegisterRequest): AuthenticationResponse {
@@ -80,6 +82,19 @@ class AuthenticationServiceImpl(
 
         val session = sessionRepository.findByToken(token).orElse(null) ?: return false
         return session.expires.after(Date())
+    }
+
+    override fun getUserInfo(request: GetUserInfoRequest): GetUserInfoResponse {
+        val userEmail = jwtService.getEmailFromToken(request.userToken)
+
+        val user = userRepository.findByEmail(userEmail)
+        if (!user.isPresent) throw NotFoundException("The given token does not correspond to any user")
+
+        return GetUserInfoResponse(
+            userId = user.get().id,
+            nickname = user.get().nickname,
+            email = user.get().email
+        )
     }
 
     override fun logoutUser(token: String) {

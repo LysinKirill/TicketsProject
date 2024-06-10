@@ -41,7 +41,7 @@ class JwtService(
         return !isTokenExpired(claims)
     }
 
-    fun getUsernameFromToken(token: String): String {
+    fun getEmailFromToken(token: String): String {
         val claims = getClaimsFromToken(token)
         return claims.subject
     }
