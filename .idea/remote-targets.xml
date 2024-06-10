@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="authentication-service" type="docker-compose" uuid="75abd82e-f34c-476a-8a9f-a1196e0697f5">
+        <config>
+          <option name="targetPlatform">
+            <TargetPlatform />
+          </option>
+          <option name="configurationFiles">
+            <list>
+              <option value="D:\KPO\TicketsProject\TicketsProject\docker-compose.yml" />
+            </list>
+          </option>
+          <option name="serviceName" value="authentication-service" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/usr/local/openjdk-17" />
+            <option name="javaVersionString" value="17.0.2" />
+          </config>
+        </ContributedStateBase>
+      </target>
+      <target name="ticket-service" type="docker-compose" uuid="077184fc-4695-433d-b578-fa88dbc5c3f8">
+        <config>
+          <option name="targetPlatform">
+            <TargetPlatform />
+          </option>
+          <option name="configurationFiles">
+            <list>
+              <option value="D:\KPO\TicketsProject\TicketsProject\docker-compose.yml" />
+            </list>
+          </option>
+          <option name="serviceName" value="ticket-service" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/usr/local/openjdk-17" />
+            <option name="javaVersionString" value="17.0.2" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

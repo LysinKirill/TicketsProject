@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Change ticket db port mapping from 8081:8080 to 8081:8081">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +17,87 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/authentication-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/tickets-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TicketsProject" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="TicketsProject" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Interface" />
+        <option value="Dockerfile" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ControllerEnhancements" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LysinKirill&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LysinKirill/TicketsProject.git",
+    "accountId": "0f1cdffb-8251-485d-bda7-ace0be9deb38"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "LysinKirill",
+    "repository": "TicketsProject"
+  }
 }]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hEG3OkNB8FsNxnNSPFMkpddWNo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,18 +106,241 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.DatabaseService.executor": "Run",
+    "Docker.DatabaseServiceAuth.executor": "Run",
+    "Docker.DatabaseServiceTickets.executor": "Run",
+    "Docker.docker-compose.yml.auth-db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.authentication-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.ticket-service: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.tickets-db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.tickets-service/Dockerfile.executor": "Run",
+    "Gradle.Build TicketsProject.executor": "Run",
+    "Gradle.Build authentication-service.executor": "Run",
+    "Gradle.Build tickets-service.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Kotlin script (Beta).build.gradle.kts.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.gradlew.executor": "Run",
+    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.AuthenticationServiceDocker.executor": "Run",
+    "Spring Boot.TicketServiceDocker.executor": "Debug",
+    "Spring Boot.TicketsServiceApplication.executor": "Debug",
+    "git-widget-placeholder": "#1 on develop",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/KPO/TicketsProject/TicketsProject/docker-compose.yml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\Xiaomi\\.gradle"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\KPO\TicketsProject\TicketsProject\tickets-service\src\main\resources\db" />
+      <recent name="D:\KPO\TicketsProject\TicketsProject\tickets-service\src\main\resources" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.hse.authenticationservice.service.interfaces" />
+      <recent name="ru.hse.authenticationservice.service" />
+    </key>
+    <key name="KotlinExtractInterfaceDialog.RECENT_KEYS">
+      <recent name="ru.hse.authenticationservice.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TicketServiceDocker">
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="TicketsProject" />
+      <option name="filePath" value="$PROJECT_DIR$/tickets-service/build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TicketsProject.authentication-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="authentication-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationServiceDocker" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="authentication-service.main" />
+      <target name="authentication-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.authenticationservice.AuthenticationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="RunConfigurationTask" enabled="false" run_configuration_name="DatabaseServiceAuth" run_configuration_type="docker-deploy" />
+      </method>
+    </configuration>
+    <configuration name="TicketServiceDocker" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tickets-service.main" />
+      <target name="ticket-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.ticketsservice.TicketsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="DatabaseServiceTickets" run_configuration_type="docker-deploy" />
+      </method>
+    </configuration>
+    <configuration name="TicketsServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TicketsProject.tickets-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.ticketsservice.TicketsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tickets-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hse.ticketsservice.TicketsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseServiceAuth" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="auth-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="DatabaseServiceTickets" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="tickets-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.auth-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="auth-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.authentication-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="authentication-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.ticket-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="ticket-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tickets-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="tickets-service/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.DatabaseServiceAuth" />
+      <item itemvalue="Docker.DatabaseServiceTickets" />
+      <item itemvalue="Docker.tickets-service/Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml.ticket-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.auth-db: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
+      <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
+      <item itemvalue="Spring Boot.AuthenticationServiceApplication (1)" />
+      <item itemvalue="Spring Boot.TicketsServiceApplication (1)" />
+      <item itemvalue="Spring Boot.TicketServiceDocker" />
+      <item itemvalue="Spring Boot.AuthenticationServiceDocker" />
+      <item itemvalue="Spring Boot.TicketsServiceApplication" />
+      <item itemvalue="Spring Boot.AuthenticationServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
+        <item itemvalue="Docker.docker-compose.yml.authentication-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.auth-db: Compose Deployment" />
+        <item itemvalue="Docker.tickets-service/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.ticket-service: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -52,11 +352,175 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717151626058</updated>
-      <workItem from="1717151627197" duration="4000" />
+      <workItem from="1717151627197" duration="19301000" />
+      <workItem from="1717545090942" duration="6329000" />
+      <workItem from="1717596386333" duration="6638000" />
+      <workItem from="1717757177190" duration="10483000" />
+      <workItem from="1717777670214" duration="9884000" />
+      <workItem from="1717870774886" duration="17374000" />
+      <workItem from="1717900246503" duration="1096000" />
+      <workItem from="1717921003150" duration="18092000" />
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <option name="closed" value="true" />
+      <created>1717164758119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717164758119</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Extract interfaces from services. Add JwtAuthenticationFilter">
+      <option name="closed" value="true" />
+      <created>1717602543912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717602543912</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init tickets service module">
+      <option name="closed" value="true" />
+      <created>1717776671932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717776671932</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add order and station entities. Add order status enum and order status converter">
+      <option name="closed" value="true" />
+      <created>1717784019156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717784019156</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add order and station repositories">
+      <option name="closed" value="true" />
+      <created>1717784046899</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717784046899</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update build.gradle.kts">
+      <option name="closed" value="true" />
+      <created>1717784079785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717784079785</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement ticket service">
+      <option name="closed" value="true" />
+      <created>1717948096533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948096534</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update docker-compose. Add Dockerfiles">
+      <option name="closed" value="true" />
+      <created>1717948159661</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948159661</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update JwtService and JwtAuthenticationFilter">
+      <option name="closed" value="true" />
+      <created>1717948227659</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948227659</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implement controller for ticket service">
+      <option name="closed" value="true" />
+      <created>1717948252810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948252810</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add schema.sql for schema initialization and data.sql for seeding">
+      <option name="closed" value="true" />
+      <created>1717948318425</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948318425</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add order status to order response DTO">
+      <option name="closed" value="true" />
+      <created>1717948677903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948677903</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implement queue-based batch order processing logic">
+      <option name="closed" value="true" />
+      <created>1717952437293</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717952437293</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add README.md">
+      <option name="closed" value="true" />
+      <created>1717987787395</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717987787395</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Change ticket db port mapping from 8081:8080 to 8081:8081">
+      <option name="closed" value="true" />
+      <created>1717989271683</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717989271683</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <MESSAGE value="Configure database, add basic security template, add authentication service and controller" />
+    <MESSAGE value="Extract interfaces from services. Add JwtAuthenticationFilter" />
+    <MESSAGE value="Add token validation. Add the corresponding endpoint to the controller" />
+    <MESSAGE value="Init tickets service module" />
+    <MESSAGE value="Add order and station entities. Add order status enum and order status converter" />
+    <MESSAGE value="Add order and station repositories" />
+    <MESSAGE value="Update build.gradle.kts" />
+    <MESSAGE value="Implement ticket service" />
+    <MESSAGE value="Update docker-compose. Add Dockerfiles" />
+    <MESSAGE value="Update JwtService and JwtAuthenticationFilter" />
+    <MESSAGE value="Implement controller for ticket service" />
+    <MESSAGE value="Add schema.sql for schema initialization and data.sql for seeding" />
+    <MESSAGE value="Add order status to order response DTO" />
+    <MESSAGE value="Implement queue-based batch order processing logic" />
+    <MESSAGE value="Add README.md" />
+    <MESSAGE value="Change ticket db port mapping from 8081:8080 to 8081:8081" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change ticket db port mapping from 8081:8080 to 8081:8081" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/impl/Base64Codec.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((HeaderWriterRequest)request).request" custom="org.springframework.security.web.header.HeaderWriterFilter.HeaderWriterRequest" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
