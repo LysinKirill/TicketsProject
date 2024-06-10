@@ -63,5 +63,12 @@ docker-compose up --build
    Описание: получение инофрмации о существующем заказе по его id
 
 ## Swagger
-http://localhost:8080/swagger-ui/index.html - авторизация
+http://localhost:8080/swagger-ui/index.html - авторизация  
 http://localhost:8081/swagger-ui/index.html - размещение заказов на билеты
+
+
+Для взаимодействия с сервисами рекомендуется использовать Postman.  
+Он позовляет удобно передать header необходимый в качетсве авторизации при выполнении опрделенных зарпосов.  
+header укзывается следующим образом:   
+Key: Authorization  
+Value: Bearer <your jwt token>  
