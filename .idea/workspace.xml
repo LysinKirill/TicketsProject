@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="update workspace.xml">
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add swagger for tickets service">
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/GlobalExceptionHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/exceptions/InvalidUserCredentialsException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/exceptions/NotFoundException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/config/SecurityConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tickets-service/src/main/kotlin/ru/hse/ticketsservice/controller/TicketsController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/controller/AuthenticationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-service/src/main/kotlin/ru/hse/authenticationservice/service/AuthenticationServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +60,8 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Dockerfile" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -83,6 +85,7 @@
     &quot;accountId&quot;: &quot;0f1cdffb-8251-485d-bda7-ace0be9deb38&quot;
   }
 }</component>
+  <component name="KotlinScriptingSettings" supportWarning="false" />
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -161,7 +164,7 @@
       <recent name="ru.hse.authenticationservice.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TicketServiceDocker">
+  <component name="RunManager" selected="Spring Boot.AuthenticationServiceDocker">
     <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="TicketsProject" />
       <option name="filePath" value="$PROJECT_DIR$/tickets-service/build.gradle.kts" />
@@ -353,7 +356,7 @@
       <workItem from="1717870774886" duration="17374000" />
       <workItem from="1717900246503" duration="1096000" />
       <workItem from="1717921003150" duration="18092000" />
-      <workItem from="1717976069671" duration="1337000" />
+      <workItem from="1717976069671" duration="1750000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <option name="closed" value="true" />
@@ -475,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717977270517</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add swagger for tickets service">
+      <option name="closed" value="true" />
+      <created>1717977543675</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717977543675</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +510,8 @@
     <MESSAGE value="Implement queue-based batch order processing logic" />
     <MESSAGE value="Add swagger for authentication service" />
     <MESSAGE value="update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml" />
+    <MESSAGE value="Add swagger for tickets service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add swagger for tickets service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
