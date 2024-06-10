@@ -28,7 +28,7 @@ services:
       context: tickets-service
       dockerfile: Dockerfile
     ports:
-      - "8081:8080"
+      - "8081:8081"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://tickets-db:5432/tickets
       - SPRING_DATASOURCE_USERNAME=postgres

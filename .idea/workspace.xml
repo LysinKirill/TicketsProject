@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Implement queue-based batch order processing logic">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="f8584b65-3d9e-4985-b48c-46c5bab970cb" name="Changes" comment="Add README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,12 +76,22 @@
     &quot;assignee&quot;: &quot;LysinKirill&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/LysinKirill/TicketsProject.git&quot;,
-    &quot;accountId&quot;: &quot;0f1cdffb-8251-485d-bda7-ace0be9deb38&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LysinKirill/TicketsProject.git",
+    "accountId": "0f1cdffb-8251-485d-bda7-ace0be9deb38"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "LysinKirill",
+    "repository": "TicketsProject"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -122,7 +133,7 @@
     "Spring Boot.AuthenticationServiceDocker.executor": "Run",
     "Spring Boot.TicketServiceDocker.executor": "Debug",
     "Spring Boot.TicketsServiceApplication.executor": "Debug",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "#1 on develop",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/KPO/TicketsProject/TicketsProject/docker-compose.yml",
@@ -455,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717952437293</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add README.md">
+      <option name="closed" value="true" />
+      <created>1717987787395</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717987787395</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +496,8 @@
     <MESSAGE value="Add schema.sql for schema initialization and data.sql for seeding" />
     <MESSAGE value="Add order status to order response DTO" />
     <MESSAGE value="Implement queue-based batch order processing logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement queue-based batch order processing logic" />
+    <MESSAGE value="Add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add README.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,9 +13,10 @@ Tickets project представляет собой микросервисное
 
 ## Сборка проекта
 
-Чтобы собрать проект с помощью Docker Compose, нужно перейти в корневой каталог проекта и выполнить следующую команду:
+Чтобы собрать проект с помощью Docker Compose, нужно перейти в корневой каталог проекта и выполнить следующие команды:
 
 ```bash
+gradlew build
 docker-compose up --build
 ```
 
@@ -52,8 +53,15 @@ docker-compose up --build
 2) /api/auth/login 
 Описание: вход в систему существующего пользователя
 
-3) /api/tickets/create-order
+3) /api/auth/user
+Описание: получение информации о пользователе по jwt токену
+
+4) /api/tickets/create-order
    Описание: создание нового заказа на покупку билета
 
-4/api/tickets/orders
+5) /api/tickets/orders
    Описание: получение инофрмации о существующем заказе по его id
+
+## Swagger
+http://localhost:8080/swagger-ui/index.html - авторизация
+http://localhost:8081/swagger-ui/index.html - размещение заказов на билеты
